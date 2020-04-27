@@ -15,7 +15,7 @@ $bearer = $login['access_token'];
 $id = $tri->trans($bearer);
 $id = json_decode($id,true);
 $id = $id['data'][0]['rewardTransactionId'];
-for($id1 = 1500; $id1 < 1600;$id1++)
+for($id1 = 1; $id1 < 16;$id1++)
 {
   $gas = $tri->claim($bearer,$id,$id1);
   echo $gas . "\r\n";
